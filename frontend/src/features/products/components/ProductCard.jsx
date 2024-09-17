@@ -67,7 +67,7 @@ export const ProductCard = ({id,title,price,thumbnail,brand,stockQuantity,handle
                     </motion.div>
                     }
                 </Stack>
-                <Typography color={"text.secondary"}>{brand}</Typography>
+                <Typography color={"#fff"}>{brand}</Typography>
             </Stack>
 
             <Stack sx={{flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>

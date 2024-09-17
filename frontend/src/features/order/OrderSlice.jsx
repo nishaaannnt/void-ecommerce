@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import { createOrder, getAllOrders, getOrderByUserId, updateOrderById } from './OrderApi'
+import { createOrder, getAllOrders, getOrderByUserId, updateOrderById, createPayment } from './OrderApi'
 
 
 const initialState={
@@ -11,6 +11,11 @@ const initialState={
     errors:null,
     successMessage:null
 }
+
+export const createPaymentAsync=createAsyncThunk("orders/createPaymentAsync",async(order)=>{
+    const createdPayment=await createPayment(order)
+    return createdPayment
+})
 
 export const createOrderAsync=createAsyncThunk("orders/createOrderAsync",async(order)=>{
     const createdOrder=await createOrder(order)

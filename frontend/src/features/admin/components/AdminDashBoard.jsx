@@ -107,15 +107,6 @@ export const AdminDashBoard = () => {
                     </motion.div>
                 </IconButton>
 
-
-        <Stack rowGap={2} mt={4} >
-            <Typography sx={{cursor:"pointer"}} variant='body2'>Totes</Typography>
-            <Typography sx={{cursor:"pointer"}} variant='body2'>Backpacks</Typography>
-            <Typography sx={{cursor:"pointer"}} variant='body2'>Travel Bags</Typography>
-            <Typography sx={{cursor:"pointer"}} variant='body2'>Hip Bags</Typography>
-            <Typography sx={{cursor:"pointer"}} variant='body2'>Laptop Sleeves</Typography>
-        </Stack>
-
         {/* brand filters */}
         <Stack mt={2}>
             <Accordion>

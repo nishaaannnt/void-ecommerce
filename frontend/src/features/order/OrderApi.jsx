@@ -1,6 +1,14 @@
 import {axiosi} from '../../config/axios'
 
 
+export const createPayment = async(order)=>{
+    try {
+        const res=await axiosi.post("/",order)
+        return res.data
+    } catch (error) {
+        throw error.response.data
+    }
+}
 export const createOrder=async(order)=>{
     try {
         const res=await axiosi.post("/orders",order)

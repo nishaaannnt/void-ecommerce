@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addAddressAsync, selectAddressStatus, selectAddresses } from '../../address/AddressSlice'
 import { selectLoggedInUser } from '../../auth/AuthSlice'
 import { Link, useNavigate } from 'react-router-dom'
-import { createOrderAsync, selectCurrentOrder, selectOrderStatus } from '../../order/OrderSlice'
+import { createOrderAsync, createPaymentAsync, selectCurrentOrder, selectOrderStatus } from '../../order/OrderSlice'
 import { resetCartByUserIdAsync, selectCartItems } from '../../cart/CartSlice'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { SHIPPING, TAXES } from '../../../constants'
@@ -54,6 +54,10 @@ export const Checkout = () => {
         dispatch(addAddressAsync(address))
     }
 
+    const handleRazorpayPayment=()=>{
+        const order={amount:orderTotal+SHIPPING+TAXES}
+        dispatch(createPaymentAsync(order))
+    }
     const handleCreateOrder=()=>{
         const order={user:loggedInUser._id,item:cartItems,address:selectedAddress,paymentMode:selectedPaymentMethod,total:orderTotal+SHIPPING+TAXES}
         dispatch(createOrderAsync(order))

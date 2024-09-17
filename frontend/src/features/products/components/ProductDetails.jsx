@@ -24,7 +24,6 @@ import Lottie from 'lottie-react'
 import {loadingAnimation} from '../../../assets'
 
 
-const SIZES=['XS','S','M','L','XL']
 const COLORS=['#020202','#F6F6F6','#B82222','#BEA9A9','#E2BB8D']
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -291,19 +290,6 @@ export const ProductDetails = () => {
                                 </Stack>
                             </Stack>
                             
-                            {/* size */}
-                            <Stack flexDirection={'row'} alignItems={'center'} columnGap={is387?'5px':'1rem'} width={'fit-content'}>
-                                <Typography>Size: </Typography>
-                                <Stack flexDirection={'row'} columnGap={is387?".5rem":"1rem"}>
-                                    {
-                                        SIZES.map((size)=>(
-                                            <motion.div onClick={()=>handleSizeSelect(size)} whileHover={{scale:1.050}} whileTap={{scale:1}} style={{border:selectedSize===size?'':"1px solid grayText",borderRadius:"8px",width:"30px",height:"30px",display:"flex",justifyContent:"center",alignItems:"center",cursor:"pointer",padding:"1.2rem",backgroundColor:selectedSize===size?"#DB4444":"whitesmoke",color:selectedSize===size?"white":""}}>
-                                                <p>{size}</p>
-                                            </motion.div>
-                                        ))
-                                    }
-                                </Stack>
-                            </Stack>
 
                             {/* quantity , add to cart and wishlist */}
                             <Stack flexDirection={"row"} columnGap={is387?".3rem":"1.5rem"} width={'100%'} >

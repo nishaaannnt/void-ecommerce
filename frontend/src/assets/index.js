@@ -14,7 +14,6 @@ import instagramPng from './images/instagram.png'
 import linkedinPng from './images/linkedin.png'
 import banner2 from './images/banner2.jpg'
 import banner3 from './images/banner3.jpg'
-import banner4 from './images/banner4.jpg'
 import loadingAnimation from './animations/loading.json'
 
 export {
@@ -34,6 +33,5 @@ export {
     linkedinPng,
     banner2,
     banner3,
-    banner4,
     loadingAnimation
 }
