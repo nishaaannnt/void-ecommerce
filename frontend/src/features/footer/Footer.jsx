@@ -1,11 +1,9 @@
 import { Box, IconButton, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { Stack } from '@mui/material'
 import React from 'react'
-import { QRCodePng, appStorePng, googlePlayPng ,facebookPng,instagramPng,twitterPng,linkedinPng} from '../../assets'
+import { facebookPng, twitterPng } from '../../assets'
 import SendIcon from '@mui/icons-material/Send';
 import { MotionConfig, motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
 
 
 export const Footer = () => {
@@ -51,7 +49,6 @@ export const Footer = () => {
                     <Typography  variant='h6'>Quick Links</Typography>
                     <Typography sx={labelStyles}>Privacy Policy</Typography>
                     <Typography sx={labelStyles}>Terms Of Use</Typography>
-                    <Typography sx={labelStyles}>FAQ</Typography>
                     <Typography sx={labelStyles}>Contact</Typography>
                 </Stack>
 
